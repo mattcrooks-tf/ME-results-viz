@@ -11,7 +11,7 @@ def calculate_uplift(df):
 
 
 def calculate_significance(_df, alpha_level):
-    p = _df['Conversion-rate'].values
+    p = _df['Conversion-rate'].values / 100
     q = 1 - p
     n = _df['Audience'].values
     sig = np.sqrt(p * q / n)
